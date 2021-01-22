@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
+import './TodoForm.css'
 
-const TodoForm = props => {
+const TodoForm = ({ addTodo }) => {
   const [input, setInput] = useState([])
 
   const inputRef = useRef(null)
@@ -15,7 +16,7 @@ const TodoForm = props => {
 
   const handleSubmit = e => {
     e.preventDefault()
-    props.onSubmit({
+    addTodo({
       id: Math.floor(Math.random() * 1000),
       text: input
     })

@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
-import TodoForm from './TodoForm'
-import Todo from './Todo'
+import TodoForm from '../TodoForm/TodoForm'
+import Todo from '../Todo/Todo'
+import './TodoList.css'
 
-const TodoList = ({
-
-}) => {
+const TodoList = () => {
   const [todos, setTodos] = useState([])
 
   const addTodo = todo => {
@@ -33,7 +32,7 @@ const TodoList = ({
   return (
     <div className="list-container" >
       <h1>New Todos!</h1>
-      <TodoForm onSubmit={addTodo} />
+      <TodoForm addTodo={addTodo} />
       <Todo todos={todos} completeTodo={completeTodo} removeTodo={removeTodo} />
     </div>
   )
