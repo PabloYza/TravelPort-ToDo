@@ -11,7 +11,6 @@ describe('<TodoList />', () => {
   const defaultProps = {
     addTodo: jest.fn(),
     removeTodo: jest.fn(),
-    completeTodo: jest.fn(),
   }
 
   beforeEach(() => {
